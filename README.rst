@@ -1,7 +1,7 @@
 url-tweets
 ==========
 
-Twitter Stream microservice built using Django.
+Twitter Stream microservice built using Django. It gets all tweets of user/friends which are having URL or media(image, video) in it.
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/

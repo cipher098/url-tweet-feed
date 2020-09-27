@@ -41,6 +41,11 @@ def save_tweets(tweets, user_id):
 
 
 def analyse_tweets(user_id):
+    """
+        Provides analysis of last 7 days of tweets:
+            which domain is most tweeted by friends/user
+            which user tweeted most links
+    """
     min_time = timezone.now() - timedelta(days=7)
     tweets = Tweet.objects.filter(user_id=user_id, created__gte=min_time)
     links = Link.objects.filter(tweet__in=tweets)
