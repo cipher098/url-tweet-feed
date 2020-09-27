@@ -76,10 +76,10 @@ Local Setup
 2. Create virtualenv.
 6. cd url_tweets
 3. Install requirements using command:
-    pip install -r requirements/local.txt
+    $ pip install -r requirements/local.txt
 4. Create .env file in url_tweets directory and add these variables with proper value:
 ::
-    POSTGRES_HOST=<db host>
+    POSTGRES_HOST=localhost
     POSTGRES_DB=<db_name>
     POSTGRES_USER=<db_user>
     POSTGRES_PASSWORD=<db_password>
@@ -92,6 +92,11 @@ Local Setup
     TWITTER_CONSUMER_SECRET_KEY=<twitter developer secret key>
 
 5. Create db locally with the same details as provided in .env file.
+    Steps: Run these commands in psql
+    $ CREATE DATABASE <db_name>;
+    $ CREATE ROLE <db_user> WITH LOGIN PASSWORD '<db_password>';
+    $ ALTER ROLE <db_user> SET default_transaction_isolation TO 'read committed'
+    $ GRANT ALL PRIVILEGES ON DATABASE <db_name> to <db_user>;
 6. Run run server using command:
     python manage.py runserver
 
