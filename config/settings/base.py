@@ -41,19 +41,19 @@ LOCALE_PATHS = [str(ROOT_DIR / "locale")]
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
-# DATABASES = {
-#     "default": env.db("DATABASE_URL", default="postgres:///url_tweets")
-# }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'url_tweets',
-#         'USER': 'url_tweets_user',
-#         'PASSWORD': 'password',
-#         'HOST': 'localhost',
-#     },
-# }
-# DATABASES["default"]["ATOMIC_REQUESTS"] = True
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd6u1q3bpqe4u7v',
+        'USER': 'bgxbeimejjpghb',
+        'PASSWORD': 'a6ca7164652772d66fc48fad733d53de3ed339ab5119e82e3a4b440a70562161',
+        'HOST': 'ec2-54-146-4-66.compute-1.amazonaws.com',
+    },
+}
+
+DATABASES["default"]["ATOMIC_REQUESTS"] = True
+DATABASES["default"]["CONN_MAX_AGE"] = env.int("CONN_MAX_AGE", default=60)  # noqa F405
+
 
 # URLS
 # ------------------------------------------------------------------------------
