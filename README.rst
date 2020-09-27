@@ -74,9 +74,11 @@ Local Setup
 1. Clone the Repository in your Local Machine
     $ git clone https://github.com/cipher098/url-tweet-feed.git
 2. Create virtualenv.
+6. cd url_tweets
 3. Install requirements using command:
     pip install -r requirements/local.txt
-4. Create .env file and add these variables with proper value:
+4. Create .env file in url_tweets directory and add these variables with proper value:
+    ::
     POSTGRES_HOST=<db host>
     POSTGRES_DB=<db_name>
     POSTGRES_USER=<db_user>
@@ -88,7 +90,10 @@ Local Setup
 
     TWITTER_CONSUMER_KEY=<twitter developer key>
     TWITTER_CONSUMER_SECRET_KEY=<twitter developer secret key>
+    ---------------
 5. Create db locally with the same details as provided in .env file.
+6. Run run server using command:
+    python manage.py runserver
 
 
 
