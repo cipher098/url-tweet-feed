@@ -54,15 +54,15 @@ INSTALLED_APPS += ["django_extensions"]  # noqa F405
 # ------------------------------------------------------------------------------
 BASE_URL = '127.0.0.1:8000'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'url_tweets',
-        'USER': 'url_tweets_user',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-    },
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'url_tweets',
+#         'USER': 'url_tweets_user',
+#         'PASSWORD': 'password',
+#         'HOST': 'localhost',
+#     },
+# }
 
 # DATABASES = {
 #     'default': {
