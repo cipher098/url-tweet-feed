@@ -55,8 +55,8 @@ class TwitterAPI:
         required_users = self.get_required_users()
         # query_string = f"from:{' OR from:'.join(required_users)} filter:links -is:retweets -filter:images -filter:videos -filter:midea url:https -url:https://twitter.com"
         # query_string = f"from:{' OR from:'.join(required_users)} filter:links url:https -url:https://twitter.com -filter:images -filter:videos -filter:retweets"
-        # query_string = f"from:{' OR from:'.join(required_users)} filter:links url:https -filter:images -filter:videos -filter:retweets -url:https://www.twitter.com"
-        query_string = f"from:{' OR from:'.join(required_users)} filter:links url:https -filter:retweets -url:https://www.twitter.com"
+        query_string = f"from:{' OR from:'.join(required_users)} filter:links url:https -filter:images -filter:videos -filter:retweets -url:https://www.twitter.com"
+        # query_string = f"from:{' OR from:'.join(required_users)} filter:links url:https -filter:retweets -url:https://www.twitter.com"
         tweets = self.client.search(q=query_string, result_type='recent')
         return tweets
 
