@@ -15,7 +15,7 @@ Twitter Stream microservice built using Django.
 
 Live Demo
 --------------
-    :Demo: https://url-tweet-feed.herokuapp.com/
+    :: https://url-tweet-feed.herokuapp.com/
 
 
 Basic Commands
