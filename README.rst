@@ -15,7 +15,7 @@ Twitter Stream microservice built using Django.
 
 Live Demo
 --------------
-    :: https://url-tweet-feed.herokuapp.com/
+    :Demo: https://url-tweet-feed.herokuapp.com/
 
 
 Basic Commands
@@ -86,7 +86,7 @@ Local Setup
 4. Install requirements using command:
     $ pip install -r requirements/local.txt
 5. For sending email using gmail smtp setup will be required, follow first 3 steps in this link to do setup in gmail:
-    :target: https://support.cloudways.com/configure-gmail-smtp/
+    :Tutorial: https://support.cloudways.com/configure-gmail-smtp/
 6. To run this project twitter developer keys will be required, if you're not having them please apply for them before proceeding to steps below.
 7. Create .env file in url_tweets directory and add these variables with proper value:
 ::
