@@ -100,10 +100,10 @@ Local Setup
 
 8. Create db locally with the same details as provided in .env file. Run these commands in psql:
 ::
-    CREATE DATABASE <db_name>;
-    CREATE ROLE <db_user> WITH LOGIN PASSWORD '<db_password>';
-    ALTER ROLE <db_user> SET default_transaction_isolation TO 'read committed'
-    GRANT ALL PRIVILEGES ON DATABASE <db_name> to <db_user>;
+    $ CREATE DATABASE <db_name>;
+    $ CREATE ROLE <db_user> WITH LOGIN PASSWORD '<db_password>';
+    $ ALTER ROLE <db_user> SET default_transaction_isolation TO 'read committed'
+    $ GRANT ALL PRIVILEGES ON DATABASE <db_name> to <db_user>;
 9. Run server using command:
     python manage.py runserver
 
