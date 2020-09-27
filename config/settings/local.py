@@ -63,6 +63,7 @@ BASE_URL = '127.0.0.1:8000'
 #         'HOST': 'localhost',
 #     },
 # }
-DATABASES["default"] = "postgres://bgxbeimejjpghb:a6ca7164652772d66fc48fad733d53de3ed339ab5119e82e3a4b440a70562161@ec2-54-146-4-66.compute-1.amazonaws.com:5432/d6u1q3bpqe4u7v"
-
+DATABASES{
+    "default": {"postgres://bgxbeimejjpghb:a6ca7164652772d66fc48fad733d53de3ed339ab5119e82e3a4b440a70562161@ec2-54-146-4-66.compute-1.amazonaws.com:5432/d6u1q3bpqe4u7v"}
+}
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
