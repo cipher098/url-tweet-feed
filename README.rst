@@ -108,7 +108,10 @@ Local Setup
     $ CREATE ROLE <db_user> WITH LOGIN PASSWORD '<db_password>';
     $ ALTER ROLE <db_user> SET default_transaction_isolation TO 'read committed'
     $ GRANT ALL PRIVILEGES ON DATABASE <db_name> to <db_user>;
-9. Run server using command:
+9. Apply migrations to db using command:
+    python manage.py migrate
+
+10. Run server using command:
     python manage.py runserver
 
 

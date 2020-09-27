@@ -61,7 +61,7 @@ class Tweet(BaseModel):
     )
 
     # Basic tweet info
-    tweet_id = models.BigIntegerField(primary_key=True)
+    tweet_id = models.BigIntegerField()
     text = models.CharField(max_length=400)
     truncated = models.BooleanField(default=False)
     lang = models.CharField(max_length=9, null=True, blank=True, default=None)
@@ -85,6 +85,9 @@ class Tweet(BaseModel):
     # Relation to other tweets
     in_reply_to_status_id = models.BigIntegerField(null=True, blank=True, default=None)
     retweeted_status_id = models.BigIntegerField(null=True, blank=True, default=None)
+
+    class Meta:
+        unique_together = (('user_id', 'tweet_id'),)
 
     @classmethod
     def create_from_json(cls, raw):
