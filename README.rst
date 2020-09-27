@@ -77,7 +77,9 @@ Local Setup
 6. cd url_tweets
 3. Install requirements using command:
     $ pip install -r requirements/local.txt
-4. Create .env file in url_tweets directory and add these variables with proper value:
+4. For sending email gmail smtp setup will be required, follow first 3 steps in this link to do setup in gmail:
+    :target: https://support.cloudways.com/configure-gmail-smtp/
+5. Create .env file in url_tweets directory and add these variables with proper value:
 ::
     POSTGRES_HOST=localhost
     POSTGRES_DB=<db_name>
@@ -91,13 +93,13 @@ Local Setup
     TWITTER_CONSUMER_KEY=<twitter developer key>
     TWITTER_CONSUMER_SECRET_KEY=<twitter developer secret key>
 
-5. Create db locally with the same details as provided in .env file. Run these commands in psql:
+6. Create db locally with the same details as provided in .env file. Run these commands in psql:
 ::
     CREATE DATABASE <db_name>;
     CREATE ROLE <db_user> WITH LOGIN PASSWORD '<db_password>';
     ALTER ROLE <db_user> SET default_transaction_isolation TO 'read committed'
     GRANT ALL PRIVILEGES ON DATABASE <db_name> to <db_user>;
-6. Run run server using command:
+7. Run run server using command:
     python manage.py runserver
 
 
