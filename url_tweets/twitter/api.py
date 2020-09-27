@@ -74,9 +74,6 @@ def tweet_analyser(request):
         save_tweets(tweets, user_id)
         response = analyse_tweets(user_id)
 
-        logger.info(f"Sending response: {response}")
         return TemplateResponse(
             request, "tweets.html", response
         )
-
-        # return HttpResponse(content=json.dumps(response), status=200)

@@ -46,7 +46,7 @@ def analyse_tweets(user_id):
     links = Link.objects.filter(tweet__in=tweets)
 
     tweet_texts = list(tweets.values('text', 'tweet_id'))
-    max_tweeted_domain = None
+    tweet_links_domain_count = None
     max_links_shared_by = None
     if len(links):
         tweet_links_domain_count = links.values('domain').annotate(total=Count('domain')).order_by('-total')
