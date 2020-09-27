@@ -77,7 +77,7 @@ Local Setup
 6. cd url_tweets
 3. Install requirements using command:
     $ pip install -r requirements/local.txt
-4. For sending email gmail smtp setup will be required, follow first 3 steps in this link to do setup in gmail:
+4. For sending email using gmail smtp setup will be required, follow first 3 steps in this link to do setup in gmail:
     :target: https://support.cloudways.com/configure-gmail-smtp/
 5. To run this project twitter developer keys will be required, if you're not having them please apply for them before proceeding to steps below.
 5. Create .env file in url_tweets directory and add these variables with proper value:
