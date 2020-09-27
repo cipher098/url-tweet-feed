@@ -18,6 +18,18 @@ Live Demo
     :Demo: https://url-tweet-feed.herokuapp.com/
 
 
+How to Use?
+----------
+::
+    1. Go to home page.
+    2. Sign up, if not done already. Will have to confirm email using a link which will come to email.
+    3. Sign In.
+    4. Click on Twitter from Nav Bar.
+    5. First time, you would redirected to twitter to authorize us.
+    6. Voylla, app is ready for you. Enjoy!
+
+
+
 Basic Commands
 --------------
 
