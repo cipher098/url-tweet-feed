@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Tweets Analyser{% endblock %}
+
+{% block content %}
+<h1>Tweets Analyser</h1>
+<br>
+<h3>User: {{ max_links_shared_by.twitter_user_screen_name }} has shared {{ max_links_shared_by.total }} links which is maximum this week out of all your friends. </h3>
+<br>
+
+<table>
+    <h3>Domain Reference counts</h3>
+    <tr>
+        <th style="padding-right: 40px">Domain</th>
+        <th>Tweet Count</th>
+    </tr>
+
+    {% for domain_count in tweet_links_domain_count %}
+    <tr>
+        <td>{{domain_count.domain}}</td>
+
+        <td>{{domain_count.total}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<table>
+  <h3>Tweets</h3>
+    <tr>
+        <th>Text</th>
+        <th>Tweet ID</th>
+    </tr>
+
+    {% for tweet in tweets %}
+    <tr>
+        <td>{{tweet.text}}</td>
+
+        <td>{{tweet.tweet_id}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock content %}

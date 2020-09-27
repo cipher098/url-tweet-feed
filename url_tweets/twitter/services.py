@@ -49,13 +49,13 @@ def analyse_tweets(user_id):
     max_tweeted_domain = None
     max_links_shared_by = None
     if len(links):
-        max_tweeted_domain = links.values('domain').annotate(total=Count('domain')).order_by('-total')[0]
+        tweet_links_domain_count = links.values('domain').annotate(total=Count('domain')).order_by('-total')
 
         max_links_shared_by = tweets.values('twitter_user_id', 'twitter_user_screen_name').annotate(total=Count('links')).order_by('-total')[0]
 
     response = {
         'tweets': tweet_texts,
-        'max_tweeted_domain': max_tweeted_domain,
+        'tweet_links_domain_count': tweet_links_domain_count,
         'max_links_shared_by': max_links_shared_by
     }
 

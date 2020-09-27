@@ -3,6 +3,9 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 
+from django.template.response import TemplateResponse
+
+
 from url_tweets.twitter.models import TwitterUserConfig, Tweet
 from url_tweets.twitter.services import save_tweets, analyse_tweets
 from url_tweets.twitter.twitter import TwitterAPI
@@ -72,5 +75,8 @@ def tweet_analyser(request):
         response = analyse_tweets(user_id)
 
         logger.info(f"Sending response: {response}")
+        return TemplateResponse(
+            request, "tweets.html", response
+        )
 
-        return HttpResponse(content=json.dumps(response), status=200)
+        # return HttpResponse(content=json.dumps(response), status=200)
