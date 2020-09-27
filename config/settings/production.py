@@ -190,10 +190,10 @@ BASE_URL = 'https://url-tweet-feed.herokuapp.com'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'url_tweets',
-        'USER': 'url_tweets_user',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
+        'NAME': 'd6u1q3bpqe4u7v',
+        'USER': 'bgxbeimejjpghb',
+        'PASSWORD': 'a6ca7164652772d66fc48fad733d53de3ed339ab5119e82e3a4b440a70562161',
+        'HOST': 'ec2-54-146-4-66.compute-1.amazonaws.com',
     },
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
