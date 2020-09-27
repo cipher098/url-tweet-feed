@@ -22,6 +22,7 @@ def save_tweets(tweets, user_id):
             saved_tweets += 1
             tweet_object = Tweet.create_from_json(tweet._json)
             tweet_object.user_id = user_id
+            tweet_object.save()
             tweet_objects.append(tweet_object)
 
             links_in_tweet = tweet._json['entities']['urls']
@@ -34,8 +35,7 @@ def save_tweets(tweets, user_id):
                     domain=domain
                 )
                 link_objects.append(link_object)
-
-    Tweet.objects.bulk_create(tweet_objects)
+    # Tweet.objects.bulk_create(tweet_objects)
     Link.objects.bulk_create(link_objects)
     logger.info(f"Saved: {saved_tweets} tweets out of {len(tweets)} tweets.")
 

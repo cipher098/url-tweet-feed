@@ -4,6 +4,10 @@ from django.db import models
 
 from url_tweets.utils.models import BaseModel
 from url_tweets.users.models import User
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 
 class TwitterUserConfig(BaseModel):
@@ -53,6 +57,12 @@ class Tweet(BaseModel):
     Incorporates several fields from the associated User object.
     """
 
+    class Meta:
+        unique_together = (('user_id', 'tweet_id'),)
+
+
+    id = models.AutoField(primary_key=True)
+
     user = models.ForeignKey(
         User,
         verbose_name='User',
@@ -86,8 +96,6 @@ class Tweet(BaseModel):
     in_reply_to_status_id = models.BigIntegerField(null=True, blank=True, default=None)
     retweeted_status_id = models.BigIntegerField(null=True, blank=True, default=None)
 
-    class Meta:
-        unique_together = (('user_id', 'tweet_id'),)
 
     @classmethod
     def create_from_json(cls, raw):
@@ -111,7 +119,7 @@ class Tweet(BaseModel):
             if counts[key] is not None and counts[key] < 0:
                 counts[key] = None
 
-        return cls(
+        tweet = cls(
             # Basic tweet info
             tweet_id=raw['id'],
             text=raw['text'],
@@ -139,6 +147,7 @@ class Tweet(BaseModel):
             in_reply_to_status_id=raw.get('in_reply_to_status_id'),
             retweeted_status_id=retweeted_status['id']
         )
+        return tweet
 
 
 class Link(BaseModel):
