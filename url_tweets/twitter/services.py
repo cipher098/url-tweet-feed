@@ -8,8 +8,8 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
 from url_tweets.twitter.models import TwitterUserConfig, Tweet, Link
+
 
 def save_tweets(tweets, user_id):
     tweet_objects = []

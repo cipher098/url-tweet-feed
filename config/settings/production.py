@@ -7,27 +7,6 @@ from .base import env
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["url-tweet-feed.herokuapp.com"])
-
-# DATABASES
-# ------------------------------------------------------------------------------
-# DATABASES["default"] = env.db("DATABASE_URL")  # noqa F405
-# DATABASES["default"]["ATOMIC_REQUESTS"] = True  # noqa F405
-# DATABASES["default"]["CONN_MAX_AGE"] = env.int("CONN_MAX_AGE", default=60)  # noqa F405
-
-# CACHES
-# ------------------------------------------------------------------------------
-# CACHES = {
-#     "default": {
-#         "BACKEND": "django_redis.cache.RedisCache",
-#         "LOCATION": env("REDIS_URL"),
-#         "OPTIONS": {
-#             "CLIENT_CLASS": "django_redis.client.DefaultClient",
-#             # Mimicing memcache behavior.
-#             # https://github.com/jazzband/django-redis#memcached-exceptions-behavior
-#             "IGNORE_EXCEPTIONS": True,
-#         },
-#     }
-# }
 CACHES = {
     "default": {
         "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
@@ -124,20 +103,6 @@ EMAIL_SUBJECT_PREFIX = env(
 # Django Admin URL regex.
 ADMIN_URL = env("DJANGO_ADMIN_URL")
 
-# Anymail
-# ------------------------------------------------------------------------------
-# https://anymail.readthedocs.io/en/stable/installation/#installing-anymail
-# INSTALLED_APPS += ["anymail"]  # noqa F405
-# https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
-# https://anymail.readthedocs.io/en/stable/installation/#anymail-settings-reference
-# https://anymail.readthedocs.io/en/stable/esps/mailgun/
-# EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
-# ANYMAIL = {
-#     "MAILGUN_API_KEY": env("MAILGUN_API_KEY", default="dummy"),
-#     "MAILGUN_SENDER_DOMAIN": env("MAILGUN_DOMAIN", default="dummy"),
-#     "MAILGUN_API_URL": env("MAILGUN_API_URL", default="https://api.mailgun.net/v3"),
-# }
-
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
@@ -195,30 +160,8 @@ LOGGING = {
     },
 }
 
-BASE_URL = 'https://url-tweet-feed.herokuapp.com'
 
 # Your stuff...
 # ------------------------------------------------------------------------------
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'd6u1q3bpqe4u7v',
-#         'USER': 'bgxbeimejjpghb',
-#         'PASSWORD': 'a6ca7164652772d66fc48fad733d53de3ed339ab5119e82e3a4b440a70562161',
-#         'HOST': 'ec2-54-146-4-66.compute-1.amazonaws.com',
-#     },
-# }
-# DATABASES["default"] = "postgres://bgxbeimejjpghb:a6ca7164652772d66fc48fad733d53de3ed339ab5119e82e3a4b440a70562161@ec2-54-146-4-66.compute-1.amazonaws.com:5432/d6u1q3bpqe4u7v"
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'd6u1q3bpqe4u7v',
-#         'USER': 'bgxbeimejjpghb',
-#         'PASSWORD': 'a6ca7164652772d66fc48fad733d53de3ed339ab5119e82e3a4b440a70562161',
-#         'HOST': 'ec2-54-146-4-66.compute-1.amazonaws.com',
-#     },
-# }
-
-# DATABASES["default"]["ATOMIC_REQUESTS"] = True
-# DATABASES["default"]["CONN_MAX_AGE"] = env.int("CONN_MAX_AGE", default=60)  # noqa F405
+BASE_URL = 'https://url-tweet-feed.herokuapp.com'
