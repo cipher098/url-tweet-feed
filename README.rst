@@ -73,7 +73,8 @@ Local Setup
 
 1. Clone the Repository in your Local Machine
     $ git clone https://github.com/cipher098/url-tweet-feed.git
-2. Create virtualenv.
+2. Create virtualenv
+::
     $ virtualenv -p $(which python3) blog_virtualenv
     $ source blog_virtualenv/bin/activate
 3. Go to project directory:
