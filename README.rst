@@ -74,13 +74,14 @@ Local Setup
 1. Clone the Repository in your Local Machine
     $ git clone https://github.com/cipher098/url-tweet-feed.git
 2. Create virtualenv.
-6. cd url_tweets
-3. Install requirements using command:
+3. Go to project directory:
+    $ cd url_tweets
+4. Install requirements using command:
     $ pip install -r requirements/local.txt
-4. For sending email using gmail smtp setup will be required, follow first 3 steps in this link to do setup in gmail:
+5. For sending email using gmail smtp setup will be required, follow first 3 steps in this link to do setup in gmail:
     :target: https://support.cloudways.com/configure-gmail-smtp/
-5. To run this project twitter developer keys will be required, if you're not having them please apply for them before proceeding to steps below.
-5. Create .env file in url_tweets directory and add these variables with proper value:
+6. To run this project twitter developer keys will be required, if you're not having them please apply for them before proceeding to steps below.
+7. Create .env file in url_tweets directory and add these variables with proper value:
 ::
     POSTGRES_HOST=localhost
     POSTGRES_DB=<db_name>
@@ -94,13 +95,13 @@ Local Setup
     TWITTER_CONSUMER_KEY=<twitter developer key>
     TWITTER_CONSUMER_SECRET_KEY=<twitter developer secret key>
 
-6. Create db locally with the same details as provided in .env file. Run these commands in psql:
+8. Create db locally with the same details as provided in .env file. Run these commands in psql:
 ::
     CREATE DATABASE <db_name>;
     CREATE ROLE <db_user> WITH LOGIN PASSWORD '<db_password>';
     ALTER ROLE <db_user> SET default_transaction_isolation TO 'read committed'
     GRANT ALL PRIVILEGES ON DATABASE <db_name> to <db_user>;
-7. Run run server using command:
+9. Run run server using command:
     python manage.py runserver
 
 
