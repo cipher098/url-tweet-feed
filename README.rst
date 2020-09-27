@@ -91,8 +91,7 @@ Local Setup
     TWITTER_CONSUMER_KEY=<twitter developer key>
     TWITTER_CONSUMER_SECRET_KEY=<twitter developer secret key>
 
-5. Create db locally with the same details as provided in .env file.
-    Steps: Run these commands in psql
+5. Create db locally with the same details as provided in .env file. Run these commands in psql:
 ::
     CREATE DATABASE <db_name>;
     CREATE ROLE <db_user> WITH LOGIN PASSWORD '<db_password>';
