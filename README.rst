@@ -14,13 +14,6 @@ Twitter Stream microservice built using Django.
 :License: MIT
 
 
-Settings
---------
-
-Moved to settings_.
-
-.. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
-
 Basic Commands
 --------------
 
@@ -60,16 +53,6 @@ Running tests with py.test
 
   $ pytest
 
-Live reloading and Sass CSS compilation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Moved to `Live reloading and SASS compilation`_.
-
-.. _`Live reloading and SASS compilation`: http://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
-
-
-
-
 
 Deployment
 ----------
@@ -85,5 +68,17 @@ See detailed `cookiecutter-django Heroku documentation`_.
 .. _`cookiecutter-django Heroku documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-on-heroku.html
 
 
+Local Setup
+----------
+
+1. Clone the Repository in your Local Machine
+    ```
+    git clone https://github.com/cipher098/url-tweet-feed.git
+    ```
+2. Create virtualenv.
+3. Install requirements using command:
+    pip install -r requirements/local.txt
+4. Create .env file and add these variables with proper value:
+    POSTGRES
 
 

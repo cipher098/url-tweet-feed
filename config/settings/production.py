@@ -103,12 +103,12 @@ EMAIL_SUBJECT_PREFIX = env(
 # Django Admin URL regex.
 ADMIN_URL = env("DJANGO_ADMIN_URL")
 
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER = "saurabhgothi@gmail.com"
-EMAIL_HOST_PASSWORD = "iogoumrmgejbmaoq"
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+# EMAIL_HOST = "smtp.gmail.com"
+# EMAIL_USE_TLS = True
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = "saurabhgothi@gmail.com"
+# EMAIL_HOST_PASSWORD = "iogoumrmgejbmaoq"
 
 # Collectfast
 # ------------------------------------------------------------------------------

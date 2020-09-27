@@ -293,7 +293,16 @@ REST_FRAMEWORK = {
 
 # django-cors-headers - https://github.com/adamchainz/django-cors-headers#setup
 CORS_URLS_REGEX = r"^/api/.*$"
+
+# Email
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+
 # Your stuff...
 # ------------------------------------------------------------------------------
-TWITTER_CONSUMER_KEY = 'zHsSUZTbjEJFt6bUKjogPk3ff'
-TWITTER_CONSUMER_SECRET_KEY = 'NLhYMPflGfXZjpWui8xzu3SDpZENnvQE0LGJNTy5DDuqn4F0O4'
+TWITTER_CONSUMER_KEY = env('TWITTER_CONSUMER_KEY')
+TWITTER_CONSUMER_SECRET_KEY = env('TWITTER_CONSUMER_SECRET_KEY')
