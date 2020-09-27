@@ -75,8 +75,8 @@ Local Setup
     $ git clone https://github.com/cipher098/url-tweet-feed.git
 2. Create virtualenv
 ::
-    $ virtualenv -p $(which python3) blog_virtualenv
-    $ source blog_virtualenv/bin/activate
+    $ virtualenv -p $(which python3) url_tweets
+    $ source url_tweets/bin/activate
 3. Go to project directory:
     $ cd url_tweets
 4. Install requirements using command:
