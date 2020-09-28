@@ -72,7 +72,7 @@ class Tweet(BaseModel):
 
     # Basic tweet info
     tweet_id = models.BigIntegerField()
-    text = models.CharField(max_length=2000)
+    text = models.TextField()
     truncated = models.BooleanField(default=False)
     lang = models.CharField(max_length=9, null=True, blank=True, default=None)
 
@@ -162,7 +162,7 @@ class Link(BaseModel):
         null=False, blank=False, on_delete=models.CASCADE,
     )
 
-    url = models.CharField(max_length=400, null=False, blank=True)
+    url = models.TextField(null=False, blank=True)
 
     domain = models.CharField(max_length=200, null=False, blank=True)
 
