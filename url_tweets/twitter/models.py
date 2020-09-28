@@ -44,7 +44,7 @@ class TwitterUserConfig(BaseModel):
     access_token_secret = models.CharField(
         verbose_name='Access Token Secret',
         null=True, blank=True,
-        max_length=200,
+        max_length=400,
     )
 
     def __str__(self):
@@ -78,8 +78,8 @@ class Tweet(BaseModel):
 
     # Basic user info
     twitter_user_id = models.BigIntegerField()
-    twitter_user_screen_name = models.CharField(max_length=200)
-    twitter_user_name = models.CharField(max_length=300)
+    twitter_user_screen_name = models.CharField(max_length=400)
+    twitter_user_name = models.CharField(max_length=400)
     twitter_user_verified = models.BooleanField(default=False)
 
     # Timing parameters
