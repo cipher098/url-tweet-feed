@@ -26,19 +26,19 @@ class TwitterUserConfig(BaseModel):
     oauth_token = models.CharField(
         verbose_name='Oauth Token',
         null=False, blank=False,
-        max_length=200,
+        max_length=400,
     )
 
     oauth_token_secret = models.CharField(
         verbose_name='Oauth Token Secret',
         null=False, blank=False,
-        max_length=200,
+        max_length=400,
     )
 
     access_token = models.CharField(
         verbose_name='Access Token',
         null=True, blank=True,
-        max_length=200,
+        max_length=400,
     )
 
     access_token_secret = models.CharField(
@@ -72,14 +72,14 @@ class Tweet(BaseModel):
 
     # Basic tweet info
     tweet_id = models.BigIntegerField()
-    text = models.CharField(max_length=400)
+    text = models.CharField(max_length=2000)
     truncated = models.BooleanField(default=False)
     lang = models.CharField(max_length=9, null=True, blank=True, default=None)
 
     # Basic user info
     twitter_user_id = models.BigIntegerField()
-    twitter_user_screen_name = models.CharField(max_length=50)
-    twitter_user_name = models.CharField(max_length=150)
+    twitter_user_screen_name = models.CharField(max_length=200)
+    twitter_user_name = models.CharField(max_length=300)
     twitter_user_verified = models.BooleanField(default=False)
 
     # Timing parameters
